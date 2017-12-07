@@ -1,0 +1,11 @@
+
+ENABLE_LANGUAGE(CXX)
+SET(CMAKE_AUTOMOC ON)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12)
+PROJECT(qview)
+
+ADD_EXECUTABLE(qview qview.cpp viewqueue.cpp qstat.cpp queue.cpp qjob.cpp )
+
+TARGET_LINK_LIBRARIES(qview Qt5::Core)
+
+INSTALL(TARGETS qview DESTINATION bin)
